@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_tickets">
+
+    <Button
+        android:id="@+id/btnTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="30dp"
+        android:text="Generar Ticket"
+        app:layout_constraintBottom_toTopOf="@+id/rcvTicket"
+        app:layout_constraintStart_toEndOf="@+id/txtFechaFinal"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaFinal" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="Titulo"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtNumTicket"
+        app:layout_constraintTop_toTopOf="@+id/txtNumTicket" />
+
+    <EditText
+        android:id="@+id/txtEmailAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="Email del Autor"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtFechaFinal"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutor" />
+
+    <EditText
+        android:id="@+id/txtAutor"
+        android:layout_width="208dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="Autor del Ticket"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtFechaInicio"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
+
+    <EditText
+        android:id="@+id/txtNumTicket"
+        android:layout_width="105dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Numero "
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtEstado"
+        app:layout_constraintEnd_toStartOf="@+id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/txtEstado"
+        android:layout_width="108dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="Estado"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaInicio"
+        app:layout_constraintEnd_toStartOf="@+id/txtDescripcion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumTicket" />
+
+    <EditText
+        android:id="@+id/txtFechaInicio"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="Fecha inicial"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaFinal"
+        app:layout_constraintEnd_toStartOf="@+id/txtAutor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstado" />
+
+    <EditText
+        android:id="@+id/txtFechaFinal"
+        android:layout_width="107dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="Fecha Final"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnTicket"
+        app:layout_constraintEnd_toStartOf="@+id/txtEmailAutor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaInicio" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="207dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="Breve Descripcion"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtEstado"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvTicket"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTicket" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="128dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="44dp"
+        android:text="Generacion de Tickets"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
