@@ -31,7 +31,7 @@ class activity_login : AppCompatActivity() {
         val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
 
         btnIniciarSesion.setOnClickListener {
-            val ticketsIntent = Intent(this, DataClassTickets::class.java)
+            val ticketsIntent = Intent(this, activity_tickets::class.java)
 
 
             //Evitamos que la aplicacion se cierre si no llenamos algun campo

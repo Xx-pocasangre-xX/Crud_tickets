@@ -104,7 +104,7 @@ class activity_tickets : AppCompatActivity() {
 
 
                     val addTicket =
-                        objConexion?.prepareStatement("insert into Ticket (UUID_TICKET, num_ticket, titulo, descripcion, autor, email_autor, fecha_ticket, estado, fecha_fin_ticket) values (?,?,?,?,?,?,?,?,?)")!!
+                        objConexion?.prepareStatement("insert into Tickets (UUID_TICKET, num_ticket, titulo, descripcion, autor, email_autor, fecha_ticket, estado, fecha_fin_ticket) values (?,?,?,?,?,?,?,?,?)")!!
 
                     addTicket.setString(1, UUID.randomUUID().toString())
                     addTicket.setInt(2, txtNumTicket.text.toString().toInt())

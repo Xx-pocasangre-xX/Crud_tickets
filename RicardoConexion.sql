@@ -10,7 +10,7 @@ select * from Usuarios
 create table Tickets(
 UUID_TICKET VARCHAR2(150) not null,
 num_ticket int not null,
-titulo VARCHAR2(20 BYTE) not null,
+titulo VARCHAR2(100) not null,
 descripcion	VARCHAR2(100) not null,
 autor VARCHAR2(50) not null,
 email_autor	VARCHAR2(50) not null,
